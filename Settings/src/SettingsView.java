@@ -44,6 +44,16 @@ import javax.swing.JTextField;
 	 
 	 
 	 
+//Setting Hadeel needed View elements
+	 
+     private JLabel settingHadeelLabel;
+	 
+	 private JTextField settingHadeelTextfield;
+	 
+	 private JButton settingHadeelSaveButton;
+	 
+	 private JButton settingHadeelPrintButton;
+	 
 	 
 	 
 	 public SettingsView() {
@@ -73,18 +83,26 @@ import javax.swing.JTextField;
 		  settingMariamTextfield = new JTextField();
 		  settingMariamSaveButton = new JButton("Save setting Mariam");
 		  settingMariamPrintButton = new JButton("Print to Mariam Console!");
-		  	  
-		  // Add UI element to frame
-		  GroupLayout layout = new GroupLayout(frame.getContentPane());
+		  	 
 		  
-		  layout.setAutoCreateGaps(true);
-		  layout.setAutoCreateContainerGaps(true);
+		  // Create UI elements Hadeel
+		  settingHadeelLabel = new JLabel("Setting Hadeel:");
+		  settingHadeelTextfield = new JTextField();
+		  settingHadeelSaveButton = new JButton("Save setting Hadeel");
+		  settingHadeelPrintButton = new JButton("Print to Hadeel Console!");
+		  	 
+		  
+		  // Add UI element to frame
+		  GroupLayout layout = new GroupLayout(frame.getContentPane()); 
+		  
+		  layout.setAutoCreateGaps(true); 
+		  layout.setAutoCreateContainerGaps(true); 
 		
 		  layout.setHorizontalGroup(layout.createSequentialGroup()
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneLabel).addComponent(settingLeenaLabel).addComponent(settingMariamLabel))                                        //Leena Mariam
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneTextfield).addComponent(settingLeenaTextfield).addComponent(settingMariamTextfield))                              //Leena Mariam
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneSaveButton).addComponent(settingLeenaSaveButton).addComponent(settingMariamSaveButton))                            //Leena Mariam
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOnePrintButton).addComponent(settingLeenaPrintButton).addComponent(settingMariamPrintButton)));                        //Leena Mariam
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneLabel).addComponent(settingLeenaLabel).addComponent(settingMariamLabel).addComponent(settingHadeelLabel))                                        //Leena Mariam Hadeel
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneTextfield).addComponent(settingLeenaTextfield).addComponent(settingMariamTextfield).addComponent(settingHadeelTextfield))                              //Leena Mariam Hadeel
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneSaveButton).addComponent(settingLeenaSaveButton).addComponent(settingMariamSaveButton).addComponent(settingHadeelSaveButton))                            //Leena Mariam Hadeel
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOnePrintButton).addComponent(settingLeenaPrintButton).addComponent(settingMariamPrintButton).addComponent(settingHadeelPrintButton)));                        //Leena Mariam Hadeel
 		  
 		  layout.setVerticalGroup(layout.createSequentialGroup()
 		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(settingOneLabel)
@@ -94,7 +112,12 @@ import javax.swing.JTextField;
 		    .addComponent(settingLeenaTextfield).addComponent(settingLeenaSaveButton).addComponent(settingLeenaPrintButton))                     //Leena                                                 
 		
 		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(settingMariamLabel)									//mariam
-		    .addComponent(settingMariamTextfield).addComponent(settingMariamSaveButton).addComponent(settingMariamPrintButton)));					//mariam
+		    .addComponent(settingMariamTextfield).addComponent(settingMariamSaveButton).addComponent(settingMariamPrintButton))					   //mariam
+		  
+
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(settingHadeelLabel)									//Hadeel
+		    .addComponent(settingHadeelTextfield).addComponent(settingHadeelSaveButton).addComponent(settingHadeelPrintButton)));					//Hadeel
+		 
 		  frame.getContentPane().setLayout(layout);
 		  
 		 }
@@ -145,6 +168,7 @@ import javax.swing.JTextField;
 	  this.settingOnePrintButton = print;
 	  this.settingLeenaPrintButton = print;                                                 //Leena
 	  this.settingMariamPrintButton = print;                                                 //Mariam
+	  this.settingHadeelPrintButton = print;                                                 //Hadeel
 
 
 	 } 
@@ -231,4 +255,42 @@ import javax.swing.JTextField;
 			 } 
 		 
 	 
+			 
+
+			 
+		     //Hadeel 
+			 
+			 public JLabel getSettingHadeelLabel() {
+				  return settingHadeelLabel;
+				 } 
+				 
+				 public void setSettingHadeelLabel(JLabel settingHadeelLabel) {
+				  this.settingHadeelLabel = settingHadeelLabel;
+				 } 
+				 
+				 	 
+				 public JTextField getSettingHadeelTextfield() {
+				  return settingHadeelTextfield;
+				 } 
+				 
+				 public void setSettingHadeelTextfield(JTextField settingHadeelTextfield) {
+				  this.settingHadeelTextfield = settingHadeelTextfield;
+				 } 
+				 
+				 
+				 
+				 public JButton getSettingHadeelSaveButton() {
+				  return settingHadeelSaveButton;
+				 } 
+				 
+				 public void setSettingHadeelSaveButton(JButton settingHadeelSaveButton) {
+				  this.settingHadeelSaveButton = settingHadeelSaveButton;
+				 } 
+				 
+				 	 
+				 public JButton getSettingHadeelPrintButton() {
+				  return settingHadeelPrintButton;
+				 } 
+				 
+				 
 }
