@@ -12,13 +12,18 @@ public class SettingsController {
 	 
 	 public void initView() {
 	  view.getSettingOneTextfield().setText(Integer.toString(model.getConfig1()));
-	  
+	  view.getSettingLeenaTextfield().setText(Integer.toString(model.getconfigLeena()));             //Leena
+
 	 } 
 	 
 	 public void initController() {
 	  view.getSettingOneSaveButton().addActionListener(e -> saveSettingOne());
 	  
 	  view.getSettingOnePrintButton().addActionListener(e -> printToConsole());
+	  
+      view.getSettingLeenaSaveButton().addActionListener(e -> saveSettingLeena());                   //Leena
+	  
+	  view.getSettingLeenaPrintButton().addActionListener(e -> printToConsole());                    //Leena
 	  
 	 } 
 	 
@@ -28,7 +33,14 @@ public class SettingsController {
 	 
 	 private void printToConsole() {
 	  System.out.println(model.getConfig1());
+	  System.out.println(model.getconfigLeena());                                  //Leena
+
 	 } 
+	 
+
+	 private void saveSettingLeena() {
+	  model.setconfigLeena(Integer.parseInt(view.getSettingLeenaTextfield().getText()));            //Leena
+	  } 
 	 
 	
 }

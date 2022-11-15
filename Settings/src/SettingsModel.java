@@ -8,7 +8,8 @@ private static SettingsModel uniqueInstance;
 	}
 	
 	private int config1;
-	
+	private int configLeena;                                          //Leena
+
 	public static SettingsModel getInstance() {
 		if (uniqueInstance == null) {
 			uniqueInstance = new SettingsModel();
@@ -33,5 +34,19 @@ private static SettingsModel uniqueInstance;
 		
 		return config1;
 	}
+	
+	
+	
+	
+	public void setconfigLeena(int con) {                               //Leena
+		assert con>0;
+		configLeena=con;
+	}
+	
+	public int getconfigLeena() {                                         //Leena
+		
+		return configLeena;
+	}
 
 }
+

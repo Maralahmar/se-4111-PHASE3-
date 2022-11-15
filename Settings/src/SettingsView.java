@@ -1,4 +1,5 @@
-import java.awt.BorderLayout;import javax.swing.GroupLayout;
+import java.awt.BorderLayout;
+import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -19,6 +20,21 @@ import javax.swing.JTextField;
 	 private JButton settingOnePrintButton;
 	 
 	 
+	 
+	 //Setting Leena needed View elements
+	 
+     private JLabel settingLeenaLabel;
+	 
+	 private JTextField settingLeenaTextfield;
+	 
+	 private JButton settingLeenaSaveButton;
+	 
+	 private JButton settingLeenaPrintButton;
+	 
+	 
+	 
+	 
+	 
 	 public SettingsView() {
 	 
 		  frame = new JFrame("Settings");
@@ -33,27 +49,46 @@ import javax.swing.JTextField;
 		  settingOneTextfield = new JTextField();
 		  settingOneSaveButton = new JButton("Save setting one");
 		  settingOnePrintButton = new JButton("Print to Console!");
+		  
+		  
+		  // Create UI elements Leena
+		  settingLeenaLabel = new JLabel("Setting Leena:");
+		  settingLeenaTextfield = new JTextField();
+		  settingLeenaSaveButton = new JButton("Save setting Leena");
+		  settingLeenaPrintButton = new JButton("Print to Leena Console!");
 		  	  
 		  // Add UI element to frame
 		  GroupLayout layout = new GroupLayout(frame.getContentPane());
 		  
 		  layout.setAutoCreateGaps(true);
 		  layout.setAutoCreateContainerGaps(true);
-		  
+		
 		  layout.setHorizontalGroup(layout.createSequentialGroup()
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneLabel))
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneTextfield))
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneSaveButton))
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOnePrintButton)));
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneLabel).addComponent(settingLeenaLabel))                                      //Leena
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneTextfield).addComponent(settingLeenaTextfield))                              //Leena
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneSaveButton).addComponent(settingLeenaSaveButton))                            //Leena 
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOnePrintButton).addComponent(settingLeenaPrintButton)));                        //Leena
 		  
 		  layout.setVerticalGroup(layout.createSequentialGroup()
 		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(settingOneLabel)
-		    .addComponent(settingOneTextfield).addComponent(settingOneSaveButton).addComponent(settingOnePrintButton)));
+		    .addComponent(settingOneTextfield).addComponent(settingOneSaveButton).addComponent(settingOnePrintButton))  
 		  
-		  
+		   .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(settingLeenaLabel)                                    //Leena
+		   .addComponent(settingLeenaTextfield).addComponent(settingLeenaSaveButton).addComponent(settingLeenaPrintButton)));                      //Leena                                                 
+				  
 		  frame.getContentPane().setLayout(layout);
 		  
-		 } 
+		 }
+	
+	 
+	
+	 
+	 
+	 
+	 
+	 
+	 
+
 	 
 	 public JFrame getFrame() {
 	  return frame;
@@ -97,6 +132,58 @@ import javax.swing.JTextField;
 	 
 	 public void setPrintButton(JButton print) {
 	  this.settingOnePrintButton = print;
+	  this.settingLeenaPrintButton = print;                                                 //Leena
+
 	 } 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+     //Leena 
+	 
+	 public JLabel getSettingLeenaLabel() {
+		  return settingLeenaLabel;
+		 } 
+		 
+		 public void setSettingLeenaLabel(JLabel settingLeenaLabel) {
+		  this.settingLeenaLabel = settingLeenaLabel;
+		 } 
+		 
+		 	 
+		 public JTextField getSettingLeenaTextfield() {
+		  return settingLeenaTextfield;
+		 } 
+		 
+		 public void setSettingLeenaTextfield(JTextField settingLeenaTextfield) {
+		  this.settingLeenaTextfield = settingLeenaTextfield;
+		 } 
+		 
+		 
+		 
+		 public JButton getSettingLeenaSaveButton() {
+		  return settingLeenaSaveButton;
+		 } 
+		 
+		 public void setSettingLeenaSaveButton(JButton settingLeenaSaveButton) {
+		  this.settingLeenaSaveButton = settingLeenaSaveButton;
+		 } 
+		 
+		 	 
+		 public JButton getSettingLeenaPrintButton() {
+		  return settingLeenaPrintButton;
+		 } 
+		 
+		 
+		 
+		 
+		 
 	 
 }
