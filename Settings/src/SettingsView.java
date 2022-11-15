@@ -32,6 +32,17 @@ import javax.swing.JTextField;
 	 private JButton settingLeenaPrintButton;
 	 
 	 
+ //Setting Mariam needed View elements
+	 
+     private JLabel settingMariamLabel;
+	 
+	 private JTextField settingMariamTextfield;
+	 
+	 private JButton settingMariamSaveButton;
+	 
+	 private JButton settingMariamPrintButton;
+	 
+	 
 	 
 	 
 	 
@@ -56,6 +67,12 @@ import javax.swing.JTextField;
 		  settingLeenaTextfield = new JTextField();
 		  settingLeenaSaveButton = new JButton("Save setting Leena");
 		  settingLeenaPrintButton = new JButton("Print to Leena Console!");
+		  
+		  // Create UI elements Mariam
+		  settingMariamLabel = new JLabel("Setting Mariam:");
+		  settingMariamTextfield = new JTextField();
+		  settingMariamSaveButton = new JButton("Save setting Mariam");
+		  settingMariamPrintButton = new JButton("Print to Mariam Console!");
 		  	  
 		  // Add UI element to frame
 		  GroupLayout layout = new GroupLayout(frame.getContentPane());
@@ -64,30 +81,24 @@ import javax.swing.JTextField;
 		  layout.setAutoCreateContainerGaps(true);
 		
 		  layout.setHorizontalGroup(layout.createSequentialGroup()
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneLabel).addComponent(settingLeenaLabel))                                      //Leena
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneTextfield).addComponent(settingLeenaTextfield))                              //Leena
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneSaveButton).addComponent(settingLeenaSaveButton))                            //Leena 
-		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOnePrintButton).addComponent(settingLeenaPrintButton)));                        //Leena
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneLabel).addComponent(settingLeenaLabel).addComponent(settingMariamLabel))                                        //Leena Mariam
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneTextfield).addComponent(settingLeenaTextfield).addComponent(settingMariamTextfield))                              //Leena Mariam
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOneSaveButton).addComponent(settingLeenaSaveButton).addComponent(settingMariamSaveButton))                            //Leena Mariam
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(settingOnePrintButton).addComponent(settingLeenaPrintButton).addComponent(settingMariamPrintButton)));                        //Leena Mariam
 		  
 		  layout.setVerticalGroup(layout.createSequentialGroup()
 		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(settingOneLabel)
 		    .addComponent(settingOneTextfield).addComponent(settingOneSaveButton).addComponent(settingOnePrintButton))  
 		  
-		   .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(settingLeenaLabel)                                    //Leena
-		   .addComponent(settingLeenaTextfield).addComponent(settingLeenaSaveButton).addComponent(settingLeenaPrintButton)));                      //Leena                                                 
-				  
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(settingLeenaLabel)                                  //Leena
+		    .addComponent(settingLeenaTextfield).addComponent(settingLeenaSaveButton).addComponent(settingLeenaPrintButton))                     //Leena                                                 
+		
+		    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(settingMariamLabel)									//mariam
+		    .addComponent(settingMariamTextfield).addComponent(settingMariamSaveButton).addComponent(settingMariamPrintButton)));					//mariam
 		  frame.getContentPane().setLayout(layout);
 		  
 		 }
-	
-	 
-	
-	 
-	 
-	 
-	 
-	 
-	 
+	  
 
 	 
 	 public JFrame getFrame() {
@@ -133,6 +144,8 @@ import javax.swing.JTextField;
 	 public void setPrintButton(JButton print) {
 	  this.settingOnePrintButton = print;
 	  this.settingLeenaPrintButton = print;                                                 //Leena
+	  this.settingMariamPrintButton = print;                                                 //Mariam
+
 
 	 } 
 	 
@@ -183,7 +196,39 @@ import javax.swing.JTextField;
 		 
 		 
 		 
-		 
+	//mariam
+		 		 
+		 public JLabel getSettingMariamLabel() {
+			  return settingMariamLabel;
+			 } 
+			 
+			 public void setSettingMariamLabel(JLabel settingMariamLabel) {
+			  this.settingMariamLabel = settingMariamLabel;
+			 } 
+			 
+			 	 
+			 public JTextField getSettingMariamTextfield() {
+			  return settingMariamTextfield;
+			 } 
+			 
+			 public void setSettingMariamTextfield(JTextField settingMariamTextfield) {
+			  this.settingMariamTextfield = settingMariamTextfield;
+			 } 
+			 
+			 
+			 
+			 public JButton getSettingMariamSaveButton() {
+			  return settingMariamSaveButton;
+			 } 
+			 
+			 public void setSettingMariamSaveButton(JButton settingMariamSaveButton) {
+			  this.settingMariamSaveButton = settingMariamSaveButton;
+			 } 
+			 
+			 	 
+			 public JButton getSettingMariamPrintButton() {
+			  return settingMariamPrintButton;
+			 } 
 		 
 	 
 }

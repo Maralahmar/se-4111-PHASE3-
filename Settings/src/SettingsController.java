@@ -13,6 +13,7 @@ public class SettingsController {
 	 public void initView() {
 	  view.getSettingOneTextfield().setText(Integer.toString(model.getConfig1()));
 	  view.getSettingLeenaTextfield().setText(Integer.toString(model.getconfigLeena()));             //Leena
+	  view.getSettingMariamTextfield().setText(Integer.toString(model.Mariamgetconfig()));             //Mariam
 
 	 } 
 	 
@@ -23,8 +24,11 @@ public class SettingsController {
 	  
       view.getSettingLeenaSaveButton().addActionListener(e -> saveSettingLeena());                   //Leena
 	  
-	  view.getSettingLeenaPrintButton().addActionListener(e -> printToConsole());                    //Leena
+	  view.getSettingLeenaPrintButton().addActionListener(e -> printToConsoleLeena());                    //Leena
+
+	  view.getSettingMariamSaveButton().addActionListener(e -> saveSettingMariam());                  //Mariam
 	  
+	  view.getSettingMariamPrintButton().addActionListener(e -> printToConsoleMariam());    				//Mariam
 	 } 
 	 
 	 private void saveSettingOne() {
@@ -33,14 +37,25 @@ public class SettingsController {
 	 
 	 private void printToConsole() {
 	  System.out.println(model.getConfig1());
-	  System.out.println(model.getconfigLeena());                                  //Leena
-
-	 } 
+	 }
 	 
+	 //Leena
+	 private void printToConsoleLeena() {
+		  System.out.println(model.getconfigLeena());                                	  
 
+		 }
+	//Mariam
+
+	 private void printToConsoleMariam() {
+	  System.out.println(model.Mariamgetconfig());                                  
+	 }
+	 // leena
 	 private void saveSettingLeena() {
-	  model.setconfigLeena(Integer.parseInt(view.getSettingLeenaTextfield().getText()));            //Leena
-	  } 
-	 
-	
+	  model.setconfigLeena(Integer.parseInt(view.getSettingLeenaTextfield().getText()));  				//Leena
+	  
+	 } 
+	//Mariam
+	 private void saveSettingMariam() {
+		  model.Mariamsetconfig(Integer.parseInt(view.getSettingMariamTextfield().getText()));            
+		 } 
 }

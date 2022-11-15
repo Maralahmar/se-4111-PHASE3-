@@ -9,6 +9,7 @@ private static SettingsModel uniqueInstance;
 	
 	private int config1;
 	private int configLeena;                                          //Leena
+	private int Mariamconfig;                                          //Mariam
 
 	public static SettingsModel getInstance() {
 		if (uniqueInstance == null) {
@@ -46,6 +47,16 @@ private static SettingsModel uniqueInstance;
 	public int getconfigLeena() {                                         //Leena
 		
 		return configLeena;
+	}
+	
+	public void Mariamsetconfig(int con) {                               //Mariam
+		assert con>0;
+		Mariamconfig=con;
+	}
+	
+	public int Mariamgetconfig() {                                         //Mariam
+		
+		return Mariamconfig;
 	}
 
 }
